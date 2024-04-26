@@ -12,10 +12,11 @@ import java.net.http.HttpResponse;
 import java.util.Map;
 
 public class ExchangeRateClient {
-    public Map<String, Double> fetchRates() throws IOException, InterruptedException {
+    public Map<String, Double> fetchRates(String baseCurrency) throws IOException, InterruptedException {
         HttpClient client = HttpClient.newHttpClient();
+        String uriString = String.format("https://v6.exchangerate-api.com/v6/e63fcffba14a69175ef29c63/latest/%s", baseCurrency);
         HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create("https://v6.exchangerate-api.com/v6/e63fcffba14a69175ef29c63/latest/USD"))
+                .uri(URI.create(uriString))
                 .build();
 
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
