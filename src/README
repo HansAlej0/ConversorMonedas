@@ -1,0 +1,9 @@
+# Conversor de Monedas
+
+## Descripción
+Este proyecto es un conversor de monedas que permite la conversion de diferentes monedas utilizando la API de exchangerate-api para obtener tasas de cambio actualizadas.
+
+## Instalación
+**Requisitos Previos**
+- Java JDK 11 o superior instalado (puedes descargarlo desde [Oracle JDK](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html) o cualquier otra distribución de Java).
+
